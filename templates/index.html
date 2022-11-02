@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Graphics Card Express Inc</title>
+        <body>
+            <h1>Graphics Cards On Order</h1>
+            {% for order in order_list %}
+            <div>
+                <p>
+                   <a href="/orders/{{loop.index}}">{{loop.index}}: {{ order.card }}, Customer: {{ order.customer_name}}, Quantity: {{ order.quantity }}</a><br>
+                </p>
+            </div>
+            {% endfor %}
+        </body>
+    </head>
+</html>
